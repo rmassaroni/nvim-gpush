@@ -38,7 +38,8 @@ function M.load(opts)
     end
 end
 
-M.gpush = gp.gpush
 M.setup = config.setup
+
+M.gpush = gp.gpush
 
 return M
