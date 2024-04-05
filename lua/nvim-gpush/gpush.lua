@@ -11,6 +11,7 @@ function M.gpush()
     local exit_code = {handle:close()}
     if exit_code[1] == true then
         print("success")
+        print("output:", result)
     else
         print("fail")
         if exit_code[3] then
