@@ -12,6 +12,10 @@ function M.setup(options)
     M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {})
 end
 
+function M.extend(options)
+  M.options = vim.tbl_deep_extend("force", {}, M.options or M.defaults, options or {})
+end
+
 M.setup()
 
 return M
