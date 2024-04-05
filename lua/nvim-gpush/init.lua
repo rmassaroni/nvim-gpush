@@ -1,4 +1,5 @@
 local gp = require("nvim-gpush.gpush")
+local config = require("nvim-gpush.config")
 
 -- Check if gpush is available
 --local gpush_installed = vim.fn.system('command -v gpush >/dev/null') == 0
@@ -31,6 +32,13 @@ end
 
 local M = {}
 
+function M.load(opts)
+    if opts then
+        require("nvim-gpush.config").extend(opts)
+    end
+end
+
 M.gpush = gp.gpush
+M.setup = config.setup
 
 return M

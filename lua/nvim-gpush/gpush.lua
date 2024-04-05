@@ -1,3 +1,5 @@
+local config = require("nvim-gpush.config")
+
 local M = {}
 
 function M.gpush()
@@ -6,6 +8,9 @@ function M.gpush()
     local handle = io.popen(cmd)
     local result = handle:read("*a")
     local exit_code = {handle:close()}
+
+    print(config.options)
+
 
     if exit_code[1] == true then
         --print("success")

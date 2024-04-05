@@ -2,6 +2,7 @@ local M = {}
 
 local defaults = {
     auto_gpush_on_write = false,
+    one_liner = true
 }
 
 M.options = {}
