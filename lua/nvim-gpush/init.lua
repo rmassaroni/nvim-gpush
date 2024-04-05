@@ -1,7 +1,8 @@
 local gp = require("nvim-gpush.gpush")
 
 -- Check if gpush is available
-local gpush_installed = vim.fn.system('command -v gpush >/dev/null') == 0
+--local gpush_installed = vim.fn.system('command -v gpush >/dev/null') == 0
+local gpush_installed = vim.fn.isdirectory(vim.fn.expand('$HOME/.gpush')) == 1
 
 if not gpush_installed then
     -- gpush is not available, proceed with installation
