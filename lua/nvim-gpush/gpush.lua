@@ -5,7 +5,7 @@ function M.gpush()
     --local result, exit_code = os.execute("echo hello")
     --local cmd = "wsl echo hello"
     local script_path = os.getenv("HOME") .. "/.gpush/gpush"
-    local cmd = "bash " .. script_path
+    local cmd = "bash -c 'source " .. script_path .. " && gpush'"
     local handle = io.popen(cmd)
     local result = handle:read("*a")
     local exit_code = {handle:close()}
