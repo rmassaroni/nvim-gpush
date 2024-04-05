@@ -6,7 +6,7 @@ local gpush_installed = vim.fn.isdirectory(vim.fn.expand('$HOME/.gpush')) == 1
 
 if not gpush_installed then
     -- gpush is not available, proceed with installation
-    --print("Installing gpush...")
+    print("Installing gpush...")
     -- Run installation script
     local install_command = "bash <(curl -sSL https://raw.githubusercontent.com/rmassaroni/gpush/install.sh)"
     local install_result = vim.fn.system(install_command)
@@ -24,7 +24,7 @@ if not gpush_installed then
     end
 else
     -- gpush is already available
-    print("gpush is already installed.")
+    --print("gpush is already installed.")
 end
 
 
