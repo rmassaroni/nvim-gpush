@@ -24,6 +24,6 @@
 ## Commands
 | Command      | Usage                                        |
 |--------------|----------------------------------------------|
-| :Gpush       | Commits & pushes all changes in current repo |
+| :Gpush       | Commits & pushes all changes in current repository |
 |              |                                              |
 |              |                                              |
