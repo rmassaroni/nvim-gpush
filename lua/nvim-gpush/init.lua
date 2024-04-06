@@ -45,6 +45,9 @@ M.setup = config.setup
 M.gpush = function(commit_message)
     gp.gpush(commit_message)
 end
-M.gw = gp.gw
+--M.gw = gp.gw
+M.gw = function(commit_message)
+    gp.gw(commit_message)
+end
 
 return M

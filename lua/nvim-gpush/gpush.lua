@@ -38,9 +38,9 @@ function M.gpush(commit_message)
     end
 end
 
-function M.gw()
+function M.gw(commit_message)
     vim.api.nvim_command('w')
-    M.gpush()
+    M.gpush(commit_message)
 end
 
 return M
