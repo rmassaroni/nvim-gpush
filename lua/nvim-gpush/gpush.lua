@@ -21,7 +21,6 @@ function M.gpush(commit_message)
             cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. commit_message .. "'"
         end
     end
-    --print(cmd)
 
     local handle = io.popen(cmd)
     local result = handle:read("*a")
