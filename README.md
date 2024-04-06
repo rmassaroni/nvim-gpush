@@ -41,3 +41,4 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - toggle auto-gpush
 - specify system cwd vs nvim cwd
 - include required storage space
+- fix mutliple-word commit message bug
