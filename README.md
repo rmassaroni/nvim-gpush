@@ -44,4 +44,4 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 
 
 ## Known bugs
-- mutliple-word commit message bug
+- 
