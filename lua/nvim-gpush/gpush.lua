@@ -11,6 +11,7 @@ function M.gpush(commit_message)
     end
     print(cmd)
 
+
     if commit_message then
         --print(commit_message)
         --cmd = cmd .. " \"" .. commit_message .. "\""
