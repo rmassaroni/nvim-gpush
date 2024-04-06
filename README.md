@@ -28,8 +28,8 @@ Powered by [rmassaroni/gpush](https://github.com/rmassaroni/gpush)!
 ## Commands
 | Command      | Usage                                        | Arguments |
 |--------------|----------------------------------------------|-----------|
-| :Gpush       | Commits & pushes all changes in current repository | commit_message     |
-| :Gw             | Writes & gpushes                                             | commit_message   |
+| :Gpush       | Commits & pushes all changes in current repository | commit_message (optional)     |
+| :Gw             | Writes & gpushes                                             | commit_message (optional)   |
 |              |                                              |      |
 
 
