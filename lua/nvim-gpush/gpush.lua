@@ -7,7 +7,7 @@ function M.gpush(commit_message)
 
     local cmd = "bash -c 'source " .. script_path .. " && gpush " .. "'" .. config.options.default_commit_message .. "'" .. "'"
     if config.options.one_liner == true then
-        cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. config.options.default_commit_message .. "'"
+        cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. "'" .. config.options.default_commit_message .. "'" .. "'"
     end
 
     if commit_message ~= "" then
