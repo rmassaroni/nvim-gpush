@@ -39,3 +39,4 @@ Powered by [rmassaroni/gpush](https://github.com/rmassaroni/gpush)!
 - toggle auto-gpush
 - gpush tag capability
 - specify system cwd vs nvim cwd
+- include required storage space
