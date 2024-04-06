@@ -14,9 +14,6 @@ function M.gpush()
     local result = handle:read("*a")
     local exit_code = {handle:close()}
 
-    print("One-liner: ", config.options.one_liner)
-
-
     if exit_code[1] == true then
         --print("success")
         --print("output:", result)
