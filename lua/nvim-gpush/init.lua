@@ -1,6 +1,7 @@
 local gp = require("nvim-gpush.gpush")
 local config = require("nvim-gpush.config")
 
+
 -- Check if gpush is available
 --local gpush_installed = vim.fn.system('command -v gpush >/dev/null') == 0
 local gpush_installed = vim.fn.isdirectory(vim.fn.expand('$HOME/.gpush')) == 1
