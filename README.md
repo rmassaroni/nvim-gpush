@@ -29,7 +29,7 @@ Powered by [rmassaroni/gpush](https://github.com/rmassaroni/gpush)!
 | Command      | Usage                                        |
 |--------------|----------------------------------------------|
 | :Gpush       | Commits & pushes all changes in current repository |
-|              |                                              |
+| :Gw             | Writes and gpushes                                             |
 |              |                                              |
 
 
