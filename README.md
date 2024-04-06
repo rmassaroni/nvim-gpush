@@ -1,3 +1,5 @@
+Powered by [gpush](https://github.com/rmassaroni/gpush)
+
 ## Installation
 ```Lua
 --lazy.nvim
