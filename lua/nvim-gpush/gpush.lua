@@ -12,7 +12,8 @@ function M.gpush(commit_message)
 
     if commit_message then
         print(commit_message)
-        cmd = cmd .. " \"" .. commit_message .. "\""
+        --cmd = cmd .. " \"" .. commit_message .. "\""
+        cmd = cmd .. " " .. commit_message
         print(cmd)
     end
 
