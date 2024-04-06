@@ -26,7 +26,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
     default_commit_message = "unnamed commit" --overrides default_message in ~/.gpush/gconfig.sh
 }
 ```
-
+    
 ## Commands
 | Command      | Usage                                        | Arguments |
 |--------------|----------------------------------------------|-----------|
