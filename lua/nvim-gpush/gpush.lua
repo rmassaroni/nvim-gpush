@@ -43,4 +43,9 @@ function M.gw(commit_message)
     M.gpush(commit_message)
 end
 
+function M.gwq(commit_message)
+    M.gw(commit_message)
+    vim.api.nvim_command('qa')
+end
+
 return M
