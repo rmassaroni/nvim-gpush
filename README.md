@@ -22,7 +22,7 @@ Powered by [rmassaroni/gpush](https://github.com/rmassaroni/gpush)!
 {
     auto_gpush_on_write = false,
     one_liner = true,
-    default_commit_message = "unnamed commit" --
+    default_commit_message = "unnamed commit" --overrides default_message in ~/.gpush/gconfig.sh
 }
 ```
 
