@@ -37,3 +37,5 @@ Powered by [rmassaroni/gpush](https://github.com/rmassaroni/gpush)!
 - auto-gpush for chosen languages
 - installation for other OSs
 - toggle auto-gpush
+- gpush tag capability
+- specify system cwd vs nvim cwd
