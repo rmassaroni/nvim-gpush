@@ -27,3 +27,7 @@
 | :Gpush       | Commits & pushes all changes in current repository |
 |              |                                              |
 |              |                                              |
+
+
+## TODO
+- auto-gpush for chosen languages
