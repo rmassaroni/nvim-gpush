@@ -28,7 +28,8 @@ function M.gpush()
 end
 
 function M.gw()
-    
+    vim.api.nvim_command('w')
+    M.gpush()
 end
 
 return M
