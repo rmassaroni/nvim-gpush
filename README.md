@@ -1,4 +1,4 @@
-Powered by [gpush](https://github.com/rmassaroni/gpush)
+Powered by [rmassaroni/gpush](https://github.com/rmassaroni/gpush)
 
 ## Installation
 ```Lua
