@@ -40,7 +40,10 @@ end
 
 M.setup = config.setup
 
-M.gpush = gp.gpush
+--M.gpush = gp.gpush
+M.gpush = function(commit_message)
+    gp.gpush(commit_message)
+end
 M.gw = gp.gw
 
 return M
