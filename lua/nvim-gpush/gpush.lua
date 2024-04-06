@@ -10,6 +10,7 @@ function M.gpush()
         cmd = "bash -c 'source " .. script_path .. " && gpush -q'"
     end
 
+
     local handle = io.popen(cmd)
     local result = handle:read("*a")
     local exit_code = {handle:close()}
