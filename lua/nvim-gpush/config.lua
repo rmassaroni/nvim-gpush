@@ -6,6 +6,7 @@ local defaults = {
     default_commit_message = "unnamed commit"
 }
 
+
 M.options = {}
 
 function M.setup(options)
