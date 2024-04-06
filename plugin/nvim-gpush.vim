@@ -15,3 +15,5 @@ command! -nargs=* Gpush lua require("nvim-gpush").gpush(<q-args>)
 
 ""command! -nargs=0 Gw lua require("nvim-gpush").gw()
 command! -nargs=* Gw lua require("nvim-gpush").gw(<q-args>)
+
+command! -nargs=* Gwq lua require("nvim-gpush").gwq(<q-args>)

@@ -50,4 +50,8 @@ M.gw = function(commit_message)
     gp.gw(commit_message)
 end
 
+M.gwq = function(commit_message)
+    gp.gwq(commit_message)
+end
+
 return M
