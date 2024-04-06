@@ -19,3 +19,10 @@
     auto_gpush_on_write = false,
     one_liner = true,
 }
+```
+
+## Commands
+| Command      | Usage                                        |
+| :Gpush       | Commits & pushes all changes in current repo |
+|              |                                              |
+|              |                                              |
