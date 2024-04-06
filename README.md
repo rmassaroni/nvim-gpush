@@ -23,6 +23,7 @@
 
 ## Commands
 | Command      | Usage                                        |
+|--------------|----------------------------------------------|
 | :Gpush       | Commits & pushes all changes in current repo |
 |              |                                              |
 |              |                                              |
