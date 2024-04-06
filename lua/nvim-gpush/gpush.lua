@@ -5,9 +5,9 @@ local M = {}
 function M.gpush(commit_message)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
 
-    local cmd = "bash -c 'source " .. script_path .. " && gpush'"
+    local cmd = "bash -c 'source " .. script_path .. " && gpush " .. config.options.default_commit_message .. "'"
     if config.options.one_liner == true then
-        cmd = "bash -c 'source " .. script_path .. " && gpush -q'"
+        cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. config.options.default_commit_message .. "'"
     end
 
     if commit_message then
