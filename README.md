@@ -1,3 +1,5 @@
+### Stop being slow
+
 Powered by [rmassaroni/gpush](https://github.com/rmassaroni/gpush)!
 
 ## Installation
