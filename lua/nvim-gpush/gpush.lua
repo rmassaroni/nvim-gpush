@@ -11,11 +11,14 @@ function M.gpush(commit_message)
     end
 
     if commit_message then
-        print(commit_message)
+        --print(commit_message)
         --cmd = cmd .. " \"" .. commit_message .. "\""
         --cmd = cmd .. " " .. commit_message
         cmd = "bash -c 'source " .. script_path .. " && gpush " .. commit_message .. "'"
-        print(cmd)
+        --print(cmd)
+        if config.options.one_liner == true then
+            cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. commit_message .. "'"
+        end
     end
 
     local handle = io.popen(cmd)
