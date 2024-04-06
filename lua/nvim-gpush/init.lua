@@ -41,5 +41,6 @@ end
 M.setup = config.setup
 
 M.gpush = gp.gpush
+M.gw = gp.gw
 
 return M
