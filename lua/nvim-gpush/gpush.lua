@@ -3,8 +3,13 @@ local config = require("nvim-gpush.config")
 local M = {}
 
 function M.gpush()
-    local script_path = os.getenv("HOME") .. "/.gpush/gpush"
+    local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
+
     local cmd = "bash -c 'source " .. script_path .. " && gpush'"
+    if config.options.one_liner == true then
+        cmd = "bash -c 'source " .. script_path .. " && gpush -q'"
+    end
+
     local handle = io.popen(cmd)
     local result = handle:read("*a")
     local exit_code = {handle:close()}
