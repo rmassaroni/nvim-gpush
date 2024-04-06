@@ -31,7 +31,7 @@ Powered by [rmassaroni/gpush](https://github.com/rmassaroni/gpush)!
 |--------------|----------------------------------------------|-----------|
 | :Gpush       | Commits & pushes all changes in current repository | commit_message (optional)     |
 | :Gw             | Writes & gpushes                                             | commit_message (optional)   |
-|              |                                              |      |
+| :Gwa             | Writes, gpushes, and quits (all)                                             | commit_message (optional)     |
 
 
 ## TODO
