@@ -27,4 +27,8 @@ function M.gpush()
     end
 end
 
+function M.gw()
+    
+end
+
 return M
