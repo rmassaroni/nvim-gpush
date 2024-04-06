@@ -35,6 +35,10 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 | :Gwq             | Writes, gpushes, & quits (all)                                             | commit_message (optional)     |
 
 
+## Example Usage
+- :Gpush fix
+- :Gpush "bug fix"
+
 ## TODO
 - auto-gpush for chosen languages
 - installation for other OSs
@@ -44,5 +48,5 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - option to change path of .glinks dir
 
 
-## Known bugs
+## Known Bugs
 - 
