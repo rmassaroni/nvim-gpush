@@ -14,7 +14,7 @@ Powered by [rmassaroni/gpush](https://github.com/rmassaroni/gpush)!
 }
 ```
 > [!NOTE]
-> This installation process should automatically install [rmassaroni/gpush](https://github.com/rmassaroni/gpush). If it fails, consider manually installing with bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh). This depends on your OS.
+> This installation process should automatically install [rmassaroni/gpush](https://github.com/rmassaroni/gpush). If it fails, consider manually installing with "bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)". This depends on your OS.
 
 ## Defaults
 ```Lua
