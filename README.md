@@ -37,7 +37,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 
 ## Example Usage
 - :Gpush
-- :Gpush commitname
+- :Gpush message
 - :Gpush "bug fix"
 
 ## TODO
