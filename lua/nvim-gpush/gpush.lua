@@ -41,6 +41,7 @@ function M.gpush(commit_message)
     --vim.cmd("<CR>")
 --]]
 
+
     local job_id = vim.fn.jobstart(cmd, {
         on_exit = function(_, exit_code)
             if exit_code == 0 then
