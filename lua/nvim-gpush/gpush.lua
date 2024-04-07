@@ -35,6 +35,7 @@ function M.gpush(commit_message)
         print("Output:", result)
     end
 
+
     vim.api.nvim_command('<CR>')
 end
 
