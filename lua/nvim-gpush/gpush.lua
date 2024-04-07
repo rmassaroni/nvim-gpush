@@ -10,7 +10,6 @@ function M.gpush(commit_message)
         cmd = "bash -c 'source " .. script_path .. " && gpush -q \"" .. config.options.default_commit_message .. "\"'"
     end
 
-
     if commit_message ~= "" then
         --print(commit_message)
         --cmd = cmd .. " \"" .. commit_message .. "\""
