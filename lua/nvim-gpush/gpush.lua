@@ -47,14 +47,14 @@ function M.gpush(commit_message)
     local output = {}
     local job_id = vim.fn.jobstart(cmd, {
         --on_exit = function(_, exit_code)
-        on_exit = function(_, _)
+        on_exit = function(_, exit_code, _)
             --if exit_code == 0 then
                 --print("gpush successful")
             if #output > 0 then
                 vim.fn.echo(output[#output])
             else
                 --print("gpush failed with exit code: " .. exit_code)
-                vim.fn.echo("fail")
+                vim.fn.echo(exit_code)
             end
         end,
         on_stdout = function(_, data)
