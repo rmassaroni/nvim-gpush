@@ -41,7 +41,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - :Gpush "bug fix"
 
 ## TODO
-- auto-gpush for chosen languages
+- language specific configs
 - installation for other OSs
 - toggle auto-gpush
 - specify system cwd vs nvim cwd
