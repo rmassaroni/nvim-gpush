@@ -26,7 +26,7 @@ function M.gpush(commit_message)
     if exit_code[1] == true then
         --print("success")
         --print("result" .. result)
-        result = result:gsub("%z", "")
+        --result = result:gsub("%z", "")
         vim.api.nvim_command('echom "' .. result .. '"')
     else
         print("fail")
