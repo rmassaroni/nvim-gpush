@@ -40,6 +40,7 @@ function M.gpush(commit_message)
 
     vim.cmd("<CR>")
 
+
 end
 
 function M.gw(commit_message)
