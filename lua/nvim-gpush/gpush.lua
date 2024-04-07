@@ -40,6 +40,7 @@ function M.gpush(commit_message)
         print("Output:", result)
     end
 
+
 end
 
 function M.gw(commit_message)
