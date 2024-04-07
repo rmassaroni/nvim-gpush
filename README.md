@@ -55,3 +55,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 
 ## Known Bugs
 - printed output (one_liner = false) bugs the command buffer
+
+
+## Contributing
+Pull requests are welome!
