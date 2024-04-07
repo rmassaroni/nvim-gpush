@@ -22,7 +22,6 @@ function M.gpush(commit_message)
     --local result = handle:lines()
     local exit_code = {handle:close()}
 
-
     if exit_code[1] == true then
         --print("success")
         --print("result" .. result)
@@ -35,6 +34,8 @@ function M.gpush(commit_message)
         end
         print("Output:", result)
     end
+
+    vim.api.nvim_command('<CR>')
 end
 
 function M.gw(commit_message)
