@@ -42,17 +42,18 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 
 ## TODO
 - language specific configs
-- installation for other OSs
-- toggle auto-gpush
-- specify system cwd vs nvim cwd
+- installation for other OSs.  Will release v1.0.0 with this.
+- finish auto_gpush. make it toggleable.
+- specify system cwd vs nvim cwd. cwd argument
 - include required storage space, speed, and other plguin stats
-- option to change path of .glinks dir
-- Gp shortcut
-- Branch specification provided by gpush
+- option to change and specify path of .gpush dir. in config.
+- Gp shortcut. Keymaps
+- Branch specification provided by gpush. Other gpush features.
 - smart nomenclature: commits are named as a file name if only one file was edited
 - remove the requirement to press enter in response to the gpush message. works for one_liner gpush only
 - CI workflow
 - ":silent w", ":silent q"
+- Gwq should print a line to terminal after quitting.
 
 
 ## Known Bugs
