@@ -11,11 +11,7 @@ function M.gpush(commit_message)
     end
 
     if commit_message ~= "" then
-        --print(commit_message)
-        --cmd = cmd .. " \"" .. commit_message .. "\""
-        --cmd = cmd .. " " .. commit_message
         cmd = "bash -c 'source " .. script_path .. " && gpush " .. commit_message .. "'"
-        --print(cmd)
         if config.options.one_liner == true then
             cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. commit_message .. "'"
         end
@@ -28,7 +24,6 @@ function M.gpush(commit_message)
 
     if exit_code[1] == true then
         --print("success")
-        --print("output:", result)
         --print("result" .. result)
         vim.api.nvim_command('echom "' .. result .. '"')
     else
@@ -38,9 +33,6 @@ function M.gpush(commit_message)
         end
         print("Output:", result)
     end
-
-
-
 end
 
 function M.gw(commit_message)
