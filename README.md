@@ -45,7 +45,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - installation for other OSs
 - toggle auto-gpush
 - specify system cwd vs nvim cwd
-- include required storage space
+- include required storage space, speed, and other plguin stats
 - option to change path of .glinks dir
 - Gp shortcut
 - Branch specification provided by gpush
