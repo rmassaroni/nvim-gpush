@@ -23,7 +23,7 @@ function M.gpush(commit_message)
     end
 
 
---
+--t
     local handle = io.popen(cmd)
     local result = handle:read("*a")
     local exit_code = {handle:close()}
