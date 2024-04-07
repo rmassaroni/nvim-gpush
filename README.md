@@ -51,6 +51,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - Branch specification provided by gpush
 - smart nomenclature: commits are named as a file name if only one file was edited
 - remove the requirement to press enter in response to the gpush message
+- CI workflow
 
 
 ## Known Bugs
