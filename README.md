@@ -49,6 +49,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - option to change path of .glinks dir
 - Gp shortcut
 - Branch specification provided by gpush
+- smart nomenclature: commits are named as a file name if only one file was edited
 
 
 ## Known Bugs
