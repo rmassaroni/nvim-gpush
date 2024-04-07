@@ -42,6 +42,7 @@ function M.gpush(commit_message)
 
     --vim.cmd("<CR>")
 --]]
+    --
 
     local output = {}
     local job_id = vim.fn.jobstart(cmd, {
