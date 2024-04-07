@@ -39,6 +39,7 @@ function M.gpush(commit_message)
     end
 
     vim.cmd("q")
+
 end
 
 function M.gw(commit_message)
