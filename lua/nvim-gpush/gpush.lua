@@ -30,7 +30,7 @@ function M.gpush(commit_message)
     if exit_code[1] == true then
         --print("success")
         --print("output:", result)
-        print(result)
+        --print(result)
     else
         print("fail")
         if exit_code[3] then
