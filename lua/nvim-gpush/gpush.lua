@@ -21,7 +21,7 @@ function M.gpush(commit_message)
             cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. commit_message .. "'"
         end
     end
-
+--[[
     local handle = io.popen(cmd)
     local result = handle:read("*a")
     local exit_code = {handle:close()}
@@ -38,8 +38,27 @@ function M.gpush(commit_message)
         print("Output:", result)
     end
 
-    vim.cmd("<CR>")
+    --vim.cmd("<CR>")
+--]]
+    local job_id = vim.fn.jobstart(cmd, {
+        on_exit = function(_, exit_code)
+            if exit_code == 0 then
+                print("gpush successful")
+            else
+                print("gpush failed with exit code: " .. exit_code)
+            end
+        end,
+        on_stdout = function(_, data)
+            -- Handle stdout if needed
+        end,
+        on_stderr = function(_, data)
+            -- Handle stderr if needed
+        end
+    })
 
+    if job_id <= 0 then
+        print("Failed to start job for gpush command")
+    end
 
 end
 
