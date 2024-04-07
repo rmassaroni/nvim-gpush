@@ -36,7 +36,7 @@ function M.gpush(commit_message)
     end
 
 
-    vim.api.nvim_command('<CR>')
+    --vim.api.nvim_command('<CR>')
 end
 
 function M.gw(commit_message)
