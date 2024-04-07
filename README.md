@@ -54,6 +54,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - CI workflow
 - ":silent w", ":silent q"
 - Gwq should print a line to terminal after quitting.
+- write all? options
 
 
 ## Known Bugs
