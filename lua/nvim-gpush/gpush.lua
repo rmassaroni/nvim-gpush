@@ -23,7 +23,7 @@ function M.gpush(commit_message)
     end
 
 
---[[
+--
     local handle = io.popen(cmd)
     local result = handle:read("*a")
     local exit_code = {handle:close()}
@@ -43,7 +43,7 @@ function M.gpush(commit_message)
     --vim.cmd("<CR>")
 --]]
     --te
-
+--[[
     local output = {}
     local job_id = vim.fn.jobstart(cmd, {
         --on_exit = function(_, exit_code)
