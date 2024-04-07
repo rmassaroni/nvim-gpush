@@ -42,6 +42,7 @@ function M.gpush(commit_message)
 --]]
 
 
+    local output = {}
     local job_id = vim.fn.jobstart(cmd, {
         on_exit = function(_, exit_code)
             if exit_code == 0 then
@@ -52,6 +53,8 @@ function M.gpush(commit_message)
         end,
         on_stdout = function(_, data)
             -- Handle stdout if needed
+            table.insert(output, data)
+            vim.fn.execute("redraw")
         end,
         on_stderr = function(_, data)
             -- Handle stderr if needed
