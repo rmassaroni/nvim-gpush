@@ -22,7 +22,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 --more config options are available in '~/.gpush/gconfig'. See https://github.com/rmassaroni/gpush
 {
     auto_gpush_on_write = false, --not yet functional. use :Gw instead
-    one_liner = true, --false results in a bug regarding the command buffer
+    one_liner = true, --false results in a visual bug regarding the command buffer
     default_commit_message = "unnamed commit" --overrides default_message in ~/.gpush/gconfig.sh
 }
 ```
