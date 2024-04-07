@@ -10,7 +10,6 @@ function M.gpush(commit_message)
         cmd = "bash -c 'source " .. script_path .. " && gpush -q \"" .. config.options.default_commit_message .. "\"'"
     end
 
-
     if commit_message ~= "" then
         --print(commit_message)
         --cmd = cmd .. " \"" .. commit_message .. "\""
@@ -22,16 +21,15 @@ function M.gpush(commit_message)
         end
     end
 
-
     local handle = io.popen(cmd)
-    --local result = handle:read("*a")
-    local result = handle:lines()
+    local result = handle:read("*a")
+    --local result = handle:lines()
     local exit_code = {handle:close()}
 
     if exit_code[1] == true then
         --print("success")
         --print("output:", result)
-        --print(result)
+        print(result)
     else
         print("fail")
         if exit_code[3] then
