@@ -22,6 +22,7 @@ function M.gpush(commit_message)
     --local result = handle:lines()
     local exit_code = {handle:close()}
 
+
     if exit_code[1] == true then
         --print("success")
         --print("result" .. result)
