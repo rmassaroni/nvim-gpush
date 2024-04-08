@@ -6,6 +6,17 @@ function M.gpush(commit_message, branch)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
 
+    if config.options.one_liner == true then
+        tags = tags .. " -q"
+    end
+    if commit_message ~= "" then
+        tags = tags .. " '" .. commit_message .. "'"
+    end
+    if branch ~= "" then
+        tags = tags .. " '" .. branch .. " `"
+    end
+
+    print("bash -c 'source " .. script_path .. " && gpush \"" .. tags .. "\"'")
 
     local cmd = "bash -c 'source " .. script_path .. " && gpush \"" .. config.options.default_commit_message .. "\"'"
     if config.options.one_liner == true then
@@ -17,10 +28,6 @@ function M.gpush(commit_message, branch)
         if config.options.one_liner == true then
             cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. commit_message .. "'"
         end
-    end
-
-    if branch ~= "" then
-        
     end
 
     local handle = io.popen(cmd)
