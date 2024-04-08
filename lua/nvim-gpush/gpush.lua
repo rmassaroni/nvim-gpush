@@ -52,13 +52,13 @@ function M.gpush(commit_message, branch)
     --vim.api.nvim_command('<CR>')
 end
 
-function M.gw(commit_message)
+function M.gw(commit_message, branch)
     vim.api.nvim_command('w')
-    M.gpush(commit_message)
+    M.gpush(commit_message, branch)
 end
 
-function M.gwq(commit_message)
-    M.gw(commit_message)
+function M.gwq(commit_message, branch)
+    M.gw(commit_message, branch)
     vim.api.nvim_command('qa')
 end
 

@@ -42,16 +42,16 @@ end
 M.setup = config.setup
 
 --M.gpush = gp.gpush
-M.gpush = function(commit_message)
-    gp.gpush(commit_message)
+M.gpush = function(commit_message, branch)
+    gp.gpush(commit_message, branch)
 end
 --M.gw = gp.gw
-M.gw = function(commit_message)
-    gp.gw(commit_message)
+M.gw = function(commit_message, branch)
+    gp.gw(commit_message, branch)
 end
 
-M.gwq = function(commit_message)
-    gp.gwq(commit_message)
+M.gwq = function(commit_message, branch)
+    gp.gwq(commit_message, branch)
 end
 
 return M
