@@ -2,8 +2,10 @@ local config = require("nvim-gpush.config")
 
 local M = {}
 
-function M.gpush(commit_message)
+function M.gpush(commit_message, branch)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
+    local tags = ""
+
 
     local cmd = "bash -c 'source " .. script_path .. " && gpush \"" .. config.options.default_commit_message .. "\"'"
     if config.options.one_liner == true then
@@ -15,6 +17,10 @@ function M.gpush(commit_message)
         if config.options.one_liner == true then
             cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. commit_message .. "'"
         end
+    end
+
+    if branch ~= "" then
+        
     end
 
     local handle = io.popen(cmd)
