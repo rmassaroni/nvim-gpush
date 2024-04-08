@@ -2,10 +2,11 @@ local config = require("nvim-gpush.config")
 
 local M = {}
 
-function M.gpush(commit_message, branch)
+function M.gpush(commit_message)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
 
+    local branch = ""
     if config.options.one_liner == true then
         tags = tags .. " -q"
     end
@@ -17,6 +18,7 @@ function M.gpush(commit_message, branch)
     end
 
     print("bash -c 'source " .. script_path .. " && gpush \"" .. tags .. "\"'")
+
 
     local cmd = "bash -c 'source " .. script_path .. " && gpush \"" .. config.options.default_commit_message .. "\"'"
     if config.options.one_liner == true then
@@ -52,13 +54,13 @@ function M.gpush(commit_message, branch)
     --vim.api.nvim_command('<CR>')
 end
 
-function M.gw(commit_message, branch)
+function M.gw(commit_message)
     vim.api.nvim_command('w')
-    M.gpush(commit_message, branch)
+    M.gpush(commit_message)
 end
 
-function M.gwq(commit_message, branch)
-    M.gw(commit_message, branch)
+function M.gwq(commit_message)
+    M.gw(commit_message)
     vim.api.nvim_command('qa')
 end
 
