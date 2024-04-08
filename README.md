@@ -55,6 +55,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - ":silent w", ":silent q"
 - Gwq should print a line to terminal after quitting.
 - write all? options
+- support for other plugin managers
 
 
 ## Known Bugs
