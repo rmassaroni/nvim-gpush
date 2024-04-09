@@ -57,6 +57,8 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - Gwq should print a line to terminal after quitting.
 - write all? options
 - support for other plugin managers
+- script to find if there is a new release of gpush available for download
+- config option to auto_update gpush
 
 
 ## Known Bugs
