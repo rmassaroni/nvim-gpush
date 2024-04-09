@@ -59,6 +59,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - support for other plugin managers
 - script to find if there is a new release of gpush available for download
 - config option to auto_update gpush
+- mention required version of gpush. the latest is not always required
 
 
 ## Known Bugs
