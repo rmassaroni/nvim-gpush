@@ -1,5 +1,6 @@
 local gp = require("nvim-gpush.gpush")
 local config = require("nvim-gpush.config")
+local update = require("nvim-gpush.gpush_update")
 
 
 -- Check if gpush is available
@@ -52,6 +53,10 @@ end
 
 M.gwq = function(commit_message)
     gp.gwq(commit_message)
+end
+
+M.update = function()
+    update.update()
 end
 
 return M
