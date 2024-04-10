@@ -6,7 +6,7 @@ function M.gpush(commit_message)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
 
-    local branch = ""
+    local branch = "multi-arg-feature"
     if config.options.one_liner == true then
         tags = tags .. " -q"
     end
