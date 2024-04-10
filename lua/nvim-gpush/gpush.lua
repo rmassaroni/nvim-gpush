@@ -28,6 +28,7 @@ function M.gpush(args)
         tags = tags .. " " .. config.options.default_branch
     end
 
+
     local cmd = "bash -c 'source " .. script_path .. " && gpush " .. tags .. "'"
 
     local handle = io.popen(cmd)
