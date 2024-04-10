@@ -19,7 +19,6 @@ function M.gpush(commit_message)
 
 
     if config.options.debug_mode == true then
-    
         print("commit_message: " .. commit_message)
         print("branch: " .. branch)
         print("tags: " .. tags)
@@ -37,6 +36,10 @@ function M.gpush(commit_message)
         if config.options.one_liner == true then
             cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. commit_message .. "'"
         end
+    end
+
+    if config.options.debug_mode == true then
+        cmd = "bash -c 'source " .. script_path .. " && gpush " .. tags .. "'"
     end
 
     local handle = io.popen(cmd)
