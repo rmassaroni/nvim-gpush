@@ -5,7 +5,7 @@ local M = {}
 function M.gpush(args)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
-    local commit_message = config.options.default_commit_message
+    local commit_message = "\"config.options.default_commit_message\""
     local branch = config.options.default_branch
 
     if args:sub(1, 1) == "\"" then
@@ -13,7 +13,7 @@ function M.gpush(args)
         commit_message = args:sub(1, last_quote)
         branch = args:sub(last_quote + 2)
     elseif args ~= "" then
-        commit_message = args
+        commit_message = "\"" .. args .. "\""
     end
 
     if config.options.one_liner == true then
@@ -21,13 +21,9 @@ function M.gpush(args)
     end
     if commit_message ~= "" then
         tags = tags .. " " .. commit_message
-    else
-        tags = tags .. " \"" .. config.options.default_commit_message .. "\""
     end
     if branch ~= "" then
         tags = tags .. " " .. branch
-    else
-        tags = tags .. " " .. config.options.default_branch
     end
 
     local cmd = "bash -c 'source " .. script_path .. " && gpush " .. tags .. "'"
