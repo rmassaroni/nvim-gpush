@@ -34,9 +34,6 @@ function M.gpush(args)
     local exit_code = {handle:close()}
 
     if exit_code[1] == true then
-        --print("success")
-        --print("result" .. result)
-        --result = result:gsub("%z", "")
         vim.api.nvim_command('echom "' .. result .. '"')
     else
         print("fail")
@@ -45,18 +42,15 @@ function M.gpush(args)
         end
         print("Output:", result)
     end
-
-
-    --vim.api.nvim_command('<CR>')
 end
 
-function M.gw(commit_message)
+function M.gw(args)
     vim.api.nvim_command('w')
-    M.gpush(commit_message)
+    M.gpush(args)
 end
 
-function M.gwq(commit_message)
-    M.gw(commit_message)
+function M.gwq(args)
+    M.gw(args)
     vim.api.nvim_command('qa')
 end
 
