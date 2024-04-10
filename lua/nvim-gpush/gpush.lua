@@ -5,6 +5,7 @@ local M = {}
 function M.gpush(commit_message)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
+    local branch = ""
 
     local args = commit_message
     if config.options.debug_mode == true then
@@ -16,9 +17,6 @@ function M.gpush(commit_message)
         end
     end
 
-
-    --local branch = "multi-arg-feature"
-    local branch = ""
     if config.options.one_liner == true then
         tags = tags .. " -q"
     end
@@ -28,14 +26,12 @@ function M.gpush(commit_message)
         tags = tags .. " " .. config.options.default_commit_message
     end
     if branch ~= "" then
-        --tags = tags .. " " .. branch
+        tags = tags .. " " .. branch
     else
-        --tags = tags .. " " .. config.options.default_branch
+        tags = tags .. " " .. config.options.default_branch
     end
--- test
 
     if config.options.debug_mode == true then
-        print(commit_message[0])
         print("commit_message: " .. commit_message)
         print(branch)
         print("tags: " .. tags)
