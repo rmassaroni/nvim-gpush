@@ -20,7 +20,7 @@ function M.gpush(commit_message, branch)
     else
         --tags = tags .. " " .. config.options.default_branch
     end
--- test
+-- tes
 
     if config.options.debug_mode == true then
         print(commit_message[0])
