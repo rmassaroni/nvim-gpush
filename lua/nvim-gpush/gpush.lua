@@ -11,7 +11,7 @@ function M.gpush(commit_message)
         tags = tags .. " -q"
     end
     if commit_message ~= "" then
-        tags = tags .. " '" .. commit_message .. "'"
+        tags = tags .. " " .. commit_message
     end
     if branch ~= "" then
         tags = tags .. " '" .. branch .. " `"
