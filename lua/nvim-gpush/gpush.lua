@@ -23,7 +23,7 @@ function M.gpush(commit_message)
     if commit_message ~= "" then
         tags = tags .. " " .. commit_message
     else
-        tags = tags .. " " .. config.options.default_commit_message
+        tags = tags .. " \"" .. config.options.default_commit_message .. "\""
     end
     if branch ~= "" then
         tags = tags .. " " .. branch
