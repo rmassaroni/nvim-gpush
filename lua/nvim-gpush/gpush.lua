@@ -44,6 +44,10 @@ function M.gpush(args)
     end
 end
 
+function M.gp(args)
+    M.gpush(args)
+end
+
 function M.gw(args)
     vim.api.nvim_command('w')
     M.gpush(args)

@@ -41,20 +41,18 @@ function M.load(opts)
 end
 
 M.setup = config.setup
-
---M.gpush = gp.gpush
 M.gpush = function(args)
     gp.gpush(args)
 end
---M.gw = gp.gw
+M.gpshort = function(args)
+    gp.gp(args)
+end
 M.gw = function(args)
     gp.gw(args)
 end
-
 M.gwq = function(args)
     gp.gwq(args)
 end
-
 M.update = function()
     update.update()
 end
