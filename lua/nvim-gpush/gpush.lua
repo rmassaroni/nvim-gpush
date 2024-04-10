@@ -10,7 +10,7 @@ function M.gpush(commit_message)
     if config.options.debug_mode == true then
         if args:sub(1, 1) == "\"" then
             print("found quote")
-            local last_quote = args:find("/[^\"]*$")
+            local last_quote = args:find("\"[^\"]*$")
             print(last_quote)
         end
     end
