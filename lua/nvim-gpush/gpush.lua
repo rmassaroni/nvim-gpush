@@ -6,6 +6,13 @@ function M.gpush(commit_message)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
 
+    local args = commit_message
+    if config.options.debug_mode == true then
+        if args:sub(1, 1) == "\"" then
+            print(true)
+        end
+    end
+
     --local branch = "multi-arg-feature"
     local branch = ""
     if config.options.one_liner == true then
