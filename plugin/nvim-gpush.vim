@@ -9,7 +9,7 @@ let g:loaded_nvim_gpush = 1
 ""endfunction
 " command! -nargs=0 Gpush lua require("nvim-gpush").gpush()
 ""command! -nargs=* Gpush call Gpush(<q-args>)
-command! -nargs=* Gpush lua require("nvim-gpush").gpush(<q-args>)
+command! -nargs=* Gpush lua require("nvim-gpush").gpush(<f-args>)
 
 
 
