@@ -5,7 +5,7 @@ local M = {}
 function M.gpush(args)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
-    local commit_message = "\"config.options.default_commit_message\""
+    local commit_message = "\"" .. config.options.default_commit_message .. "\""
     local branch = config.options.default_branch
 
     if args:sub(1, 1) == "\"" then
