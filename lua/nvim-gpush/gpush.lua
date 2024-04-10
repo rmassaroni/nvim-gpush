@@ -8,16 +8,11 @@ function M.gpush(args)
     local commit_message = ""
     local branch = ""
 
-    --if config.options.debug_mode == true then
-        if args:sub(1, 1) == "\"" then
-            print("found quote")
-            local last_quote = args:find("\"[^\"]*$")
-            commit_message = args:sub(1, last_quote)
-            branch = args:sub(last_quote + 2)
-            print(last_quote)
-            print("branch: " .. args:sub(last_quote + 2))
-        end
-    --end
+    if args:sub(1, 1) == "\"" then
+        local last_quote = args:find("\"[^\"]*$")
+        commit_message = args:sub(1, last_quote)
+        branch = args:sub(last_quote + 2)
+    end
 
     if config.options.one_liner == true then
         tags = tags .. " -q"
@@ -33,28 +28,7 @@ function M.gpush(args)
         tags = tags .. " " .. config.options.default_branch
     end
 
-    if config.options.debug_mode == true then
-        print("commit_message: " .. commit_message)
-        print(branch)
-        print("tags: " .. tags)
-        print("bash -c 'source " .. script_path .. " && gpush " .. tags .. "'")
-    end
-
-    local cmd = "bash -c 'source " .. script_path .. " && gpush \"" .. config.options.default_commit_message .. "\"'"
-    if config.options.one_liner == true then
-        cmd = "bash -c 'source " .. script_path .. " && gpush -q \"" .. config.options.default_commit_message .. "\"'"
-    end
-
-    if commit_message ~= "" then
-        cmd = "bash -c 'source " .. script_path .. " && gpush " .. commit_message .. "'"
-        if config.options.one_liner == true then
-            cmd = "bash -c 'source " .. script_path .. " && gpush -q " .. commit_message .. "'"
-        end
-    end
-
-    --if config.options.debug_mode == true then
-        cmd = "bash -c 'source " .. script_path .. " && gpush " .. tags .. "'"
-    --end
+    local cmd = "bash -c 'source " .. script_path .. " && gpush " .. tags .. "'"
 
     local handle = io.popen(cmd)
     local result = handle:read("*a")
