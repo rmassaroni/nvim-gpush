@@ -13,6 +13,7 @@ function M.gpush(commit_message)
         end
     end
 
+
     --local branch = "multi-arg-feature"
     local branch = ""
     if config.options.one_liner == true then
