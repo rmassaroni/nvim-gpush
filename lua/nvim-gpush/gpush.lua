@@ -14,7 +14,7 @@ function M.gpush(commit_message)
         tags = tags .. " " .. commit_message
     end
     if branch ~= "" then
-        tags = tags .. " '" .. branch .. " `"
+        tags = tags .. " " .. branch
     end
 
     if config.options.debug_mode == true then
