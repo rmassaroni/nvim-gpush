@@ -23,6 +23,7 @@ function M.gpush(commit_message, branch)
 -- test
 
     if config.options.debug_mode == true then
+        print(commit_message[0])
         print("commit_message: " .. commit_message)
         print(branch)
         print("tags: " .. tags)
