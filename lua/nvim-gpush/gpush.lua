@@ -22,6 +22,7 @@ function M.gpush(commit_message)
 
         print("commit_message: " .. commit_message)
         print("branch: " .. branch)
+        print("tags: " .. tags)
         print("bash -c 'source " .. script_path .. " && gpush " .. tags .. "'")
     end
 
