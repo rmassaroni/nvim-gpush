@@ -12,6 +12,7 @@ function M.gpush(commit_message)
             print("found quote")
             local last_quote = args:find("\"[^\"]*$")
             print(last_quote)
+            print("branch: " .. args:sub(last_quote))
         end
     end
 
