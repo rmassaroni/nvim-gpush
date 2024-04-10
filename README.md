@@ -31,15 +31,18 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 ## Commands
 | Command      | Usage                                        | Arguments |
 |--------------|----------------------------------------------|-----------|
-| :Gpush       | Commits & pushes all changes in current repository | commit_message (optional)     |
-| :Gw             | Writes & gpushes                                             | commit_message (optional)   |
-| :Gwq             | Writes, gpushes, & quits (all)                                             | commit_message (optional)     |
+| :Gpush       | Commits & pushes all changes in current repository | commit_message (optional), brnach (optional)     |
+| :Gw             | Writes & gpushes                                             | commit_message (optional), branch (optional)   |
+| :Gwq             | Writes, gpushes, & quits (all)                                             | commit_message (optional), branch (optional)     |
 
 
 ## Example Usage
 - :Gpush
-- :Gpush message
+- :Gpush bug fix
 - :Gpush "bug fix"
+- :Gpush "bug fix" master
+> [!NOTE]
+> Specifying branch requires the commit_message to be surrounded by double quotes!
 
 ## TODO
 - language specific configs
@@ -59,6 +62,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - script to find if there is a new release of gpush available for download
 - config option to auto_update gpush
 - mention required version of gpush. the latest is not always required
+- single quote search
 
 
 ## Known Bugs
