@@ -18,7 +18,7 @@ function M.gpush(commit_message, branch)
     if branch ~= "" then
         --tags = tags .. " " .. branch
     else
-        tags = tags .. " " .. config.options.default_branch
+        --tags = tags .. " " .. config.options.default_branch
     end
 -- tes
 
