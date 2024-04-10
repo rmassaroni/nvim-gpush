@@ -8,8 +8,7 @@ function M.gpush(args)
     local commit_message = ""
     local branch = ""
 
-    --local args = commit_message
-    if config.options.debug_mode == true then
+    --if config.options.debug_mode == true then
         if args:sub(1, 1) == "\"" then
             print("found quote")
             local last_quote = args:find("\"[^\"]*$")
@@ -18,7 +17,7 @@ function M.gpush(args)
             print(last_quote)
             print("branch: " .. args:sub(last_quote + 2))
         end
-    end
+    --end
 
     if config.options.one_liner == true then
         tags = tags .. " -q"
@@ -53,9 +52,9 @@ function M.gpush(args)
         end
     end
 
-    if config.options.debug_mode == true then
+    --if config.options.debug_mode == true then
         cmd = "bash -c 'source " .. script_path .. " && gpush " .. tags .. "'"
-    end
+    --end
 
     local handle = io.popen(cmd)
     local result = handle:read("*a")
