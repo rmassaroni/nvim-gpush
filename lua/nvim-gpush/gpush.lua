@@ -19,6 +19,7 @@ function M.gpush(commit_message)
 
 
     if config.options.debug_mode == true then
+        print(commit_message)
         print("bash -c 'source " .. script_path .. " && gpush \"" .. tags .. "\"'")
     end
 
