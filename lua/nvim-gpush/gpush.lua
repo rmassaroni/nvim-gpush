@@ -5,13 +5,15 @@ local M = {}
 function M.gpush(args)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
-    local commit_message = ""
-    local branch = ""
+    local commit_message = config.options.default_commit_message
+    local branch = config.options.default_branch
 
     if args:sub(1, 1) == "\"" then
         local last_quote = args:find("\"[^\"]*$")
         commit_message = args:sub(1, last_quote)
         branch = args:sub(last_quote + 2)
+    elseif args ~= "" then
+        commit_message = args
     end
 
     if config.options.one_liner == true then
