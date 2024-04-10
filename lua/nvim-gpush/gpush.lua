@@ -17,7 +17,10 @@ function M.gpush(commit_message)
         tags = tags .. " '" .. branch .. " `"
     end
 
-    --print("bash -c 'source " .. script_path .. " && gpush \"" .. tags .. "\"'")
+
+    if config.options.debug_mode == true then
+        print("bash -c 'source " .. script_path .. " && gpush \"" .. tags .. "\"'")
+    end
 
 
     local cmd = "bash -c 'source " .. script_path .. " && gpush \"" .. config.options.default_commit_message .. "\"'"
