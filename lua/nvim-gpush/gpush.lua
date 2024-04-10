@@ -20,11 +20,11 @@ function M.gpush(commit_message, branch)
     else
         tags = tags .. " " .. config.options.default_branch
     end
--- 
+-- t
 
     if config.options.debug_mode == true then
         print("commit_message: " .. commit_message)
-        print("branch: " .. branch)
+        --print("branch: " .. branch)
         print("tags: " .. tags)
         print("bash -c 'source " .. script_path .. " && gpush " .. tags .. "'")
     end
