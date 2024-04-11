@@ -64,6 +64,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - config option to auto_update gpush
 - mention required version of gpush. the latest is not always required
 - single quote search
+- Ghelp. displays help stuff
 
 
 ## Known Bugs
