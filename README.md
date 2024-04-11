@@ -34,7 +34,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 | :Gpush       | Commits & pushes all changes in current repository | commit_message (optional), brnach (optional)     |
 | :Gw             | Writes & gpushes                                             | commit_message (optional), branch (optional)   |
 | :Gwq             | Writes, gpushes, & quits (all)                                             | commit_message (optional), branch (optional)     |
-| :Gp    | Shortcut for Gpush  | commit_message (optional), brnach (optional)   |
+| :Gp    | Shortcut for Gpush  | commit_message (optional), branch (optional)   |
 
 
 ## Example Usage
