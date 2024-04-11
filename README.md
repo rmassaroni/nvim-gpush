@@ -34,6 +34,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 | :Gpush       | Commits & pushes all changes in current repository | commit_message (optional), brnach (optional)     |
 | :Gw             | Writes & gpushes                                             | commit_message (optional), branch (optional)   |
 | :Gwq             | Writes, gpushes, & quits (all)                                             | commit_message (optional), branch (optional)     |
+| :Gp    | Shortcut for Gpush  | commit_message (optional), brnach (optional)   |
 
 
 ## Example Usage
@@ -51,7 +52,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - specify system cwd vs nvim cwd. cwd argument
 - include required storage space, speed, and other plguin stats
 - option to change and specify path of .gpush dir. in config.
-- Gp shortcut. Keymaps
+- Keymaps
 - smart nomenclature: commits are named as a file name if only one file was edited
 - remove the requirement to press enter in response to the gpush message. works for one_liner gpush only, not Gw
 - CI workflow
