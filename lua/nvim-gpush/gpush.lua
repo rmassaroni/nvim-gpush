@@ -13,7 +13,7 @@ function M.gpush(args)
         if config.options.file_specific_configs[file_type] then
             local file_type_config = config.options.file_specific_configs[file_type]
             if file_type_config.default_commit_message then
-                commit_message = file_type_config.default_commit_message
+                commit_message = "\"" .. file_type_config.default_commit_message .. "\""
             end
         end
     end
