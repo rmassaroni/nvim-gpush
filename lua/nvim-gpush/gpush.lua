@@ -20,7 +20,9 @@ function M.gpush(args)
                     print(true)
                     print(config.options[option])
                     print(value)
-                    require("nvim-gpush.config").options[option] = value
+                    --require("nvim-gpush.config").options[option] = value
+                    config.extend({[option] = value})
+                    print(config.options[option])
                 end
             end
         end
