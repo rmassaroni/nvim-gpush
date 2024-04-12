@@ -44,6 +44,13 @@ function M.gpush(args)
 
     if config.options.debug_mode == true then
         print(config.options.file_specific_configs[1])
+        for file_type, conf in pairs(config.options.file_specific_configs) do
+            print("File type:", file_type)
+            print("Configurations:")
+            for key, value in pairs(conf) do
+                print("\t", key, "=", value)
+            end
+        end
     end
 end
 
