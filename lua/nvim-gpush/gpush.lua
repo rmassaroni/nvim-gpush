@@ -18,6 +18,8 @@ function M.gpush(args)
             for option, value in pairs(file_type_config) do
                 if config.options[option] ~= nil then
                     print(true)
+                    print(config.options[option])
+                    print(value)
                     config.options[option] = value
                 end
             end
