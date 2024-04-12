@@ -30,7 +30,6 @@ function M.gpush(args)
 
     local handle = io.popen(cmd)
     local result = handle:read("*a")
-    --local result = handle:lines()
     local exit_code = {handle:close()}
 
     if exit_code[1] == true then
