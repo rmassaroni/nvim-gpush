@@ -74,6 +74,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - option to surround args in <>
 - filename specific configs along with extension specifc configs
 - default lua commit messsage as "unnamed lua commit"?
+- denote as .lua?
 
 
 ## Known Bugs
