@@ -44,6 +44,7 @@ function M.gpush(args)
 
     if config.options.debug_mode == true then
         print(config.options.file_specific_configs[1])
+        print(vim.bo.filetype)
         for file_type, conf in pairs(config.options.file_specific_configs) do
             print("File type:", file_type)
             print("Configurations:")
