@@ -17,8 +17,8 @@ function M.setup(options)
 end
 
 function M.file_config(file_type, key, value)
-    M.file_specific_configs[file_type] = M.options.file_specific_configs[file_type] or {}
-    M.options.file_type_options[file_type][key] = value
+    M.options.file_specific_configs[file_type] = M.options.file_specific_configs[file_type] or {}
+    M.options.file_specific_configs[file_type][key] = value
 end
 
 function M.extend(options)
