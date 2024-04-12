@@ -43,7 +43,7 @@ function M.gpush(args)
     end
 
     if config.options.debug_mode == true then
-        print(config.options.file_specific_configs)
+        print(config.options.file_specific_configs[1])
     end
 end
 
