@@ -32,8 +32,8 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
         },
         lua = {},
         java = {},
-        python = {}.
-        ...
+        python = {},
+        --every major file type is supported
     }
 }
 ```
