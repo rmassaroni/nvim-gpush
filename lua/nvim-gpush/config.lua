@@ -6,7 +6,11 @@ local defaults = {
     default_commit_message = "unnamed commit",
     default_branch = "main",
     debug_mode = false,
-    file_specific_configs = {}
+    file_specific_configs = {
+        lua = {},
+        java = {},
+        py = {},
+    }
 }
 
 
