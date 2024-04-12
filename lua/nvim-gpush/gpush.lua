@@ -5,6 +5,7 @@ local M = {}
 function M.gpush(args)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
+    local file_type = vim.bo.filetype
 
     if config.options.debug_mode == true then
         if config.options.file_specific_configs[file_type] then
