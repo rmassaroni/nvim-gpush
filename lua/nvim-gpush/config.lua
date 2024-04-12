@@ -16,6 +16,11 @@ function M.setup(options)
     M.options = vim.tbl_deep_extend("force", {}, defaults, options or {})
 end
 
+function M.file_config(file_type, key, value)
+    M.file_specific_configs[file_type] = M.options.file_specific_configs[file_type] or {}
+    M.options.file_type_options[file_type][key] = value
+end
+
 function M.extend(options)
   M.options = vim.tbl_deep_extend("force", {}, M.options or defaults, options or {})
 end
