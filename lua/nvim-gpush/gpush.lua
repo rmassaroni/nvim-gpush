@@ -5,24 +5,13 @@ local M = {}
 function M.gpush(args)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
-    --local commit_message = "\"" .. config.options.default_commit_message .. "\""
-    --local branch = config.options.default_branch
-    local file_type = vim.bo.filetype
 
     if config.options.debug_mode == true then
         if config.options.file_specific_configs[file_type] then
             local file_type_config = config.options.file_specific_configs[file_type]
-            --if file_type_config.default_commit_message then
-            --    commit_message = "\"" .. file_type_config.default_commit_message .. "\""
-            --end
             for option, value in pairs(file_type_config) do
                 if config.options[option] ~= nil then
-                    print(true)
-                    print(config.options[option])
-                    print(value)
-                    --require("nvim-gpush.config").options[option] = value
                     config.extend({[option] = value})
-                    print(config.options[option])
                 end
             end
         end
@@ -64,18 +53,6 @@ function M.gpush(args)
             print("Exit code:", exit_code[3])
         end
         print("Output:", result)
-    end
-
-    if config.options.debug_mode == true then
-        print(config.options.file_specific_configs[1])
-        print(vim.bo.filetype)
-        for file_type, conf in pairs(config.options.file_specific_configs) do
-            print("File type:", file_type)
-            print("Configurations:")
-            for key, value in pairs(conf) do
-                print("\t", key, "=", value)
-            end
-        end
     end
 end
 
