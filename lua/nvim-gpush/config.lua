@@ -7,8 +7,11 @@ local defaults = {
     default_branch = "main",
     debug_mode = false,
     file_specific_configs = {
+        markdown = {
+            default_commit_message = "readme"
+        },
         lua = {
-            default_commit_message = "lua test"
+            --default_commit_message = "lua test"
         },
         java = {},
         py = {},
