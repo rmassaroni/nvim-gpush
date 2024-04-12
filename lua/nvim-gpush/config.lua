@@ -7,7 +7,9 @@ local defaults = {
     default_branch = "main",
     debug_mode = false,
     file_specific_configs = {
-        lua = {},
+        lua = {
+            default_commit_message = "lua test"
+        },
         java = {},
         py = {},
     }
