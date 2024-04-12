@@ -17,6 +17,7 @@ function M.gpush(args)
             --end
             for option, value in pairs(file_type_config) do
                 if config.options[option] ~= nil then
+                    print(true)
                     config.options[option] = value
                 end
             end
