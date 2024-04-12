@@ -7,13 +7,11 @@ function M.gpush(args)
     local tags = ""
     local file_type = vim.bo.filetype
 
-    if config.options.debug_mode == true then
-        if config.options.file_specific_configs[file_type] then
-            local file_type_config = config.options.file_specific_configs[file_type]
-            for option, value in pairs(file_type_config) do
-                if config.options[option] ~= nil then
-                    config.extend({[option] = value})
-                end
+    if config.options.file_specific_configs[file_type] then
+        local file_type_config = config.options.file_specific_configs[file_type]
+        for option, value in pairs(file_type_config) do
+            if config.options[option] ~= nil then
+                config.extend({[option] = value})
             end
         end
     end

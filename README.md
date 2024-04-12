@@ -24,7 +24,13 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
     auto_gpush_on_write = false, --not yet functional. use :Gw instead
     one_liner = true, --false results in a visual bug regarding the command buffer
     default_commit_message = "unnamed commit" --overrides default_message in ~/.gpush/gconfig.sh
-    default_branch = "main"
+    default_branch = "main",
+    file_specific_configs = {
+        lua = {},
+        java = {},
+        py = {}.
+        --denote file type configs by their extension
+    }
 }
 ```
     
@@ -46,7 +52,6 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 > Specifying branch requires the commit_message to be surrounded by double quotes!
 
 ## TODO
-- language specific configs
 - installation for other OSs.  Will release v1.0.0 with this.
 - finish auto_gpush. make it toggleable.
 - specify system cwd vs nvim cwd. cwd argument
