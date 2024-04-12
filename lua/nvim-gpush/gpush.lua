@@ -7,6 +7,16 @@ function M.gpush(args)
     local tags = ""
     local commit_message = "\"" .. config.options.default_commit_message .. "\""
     local branch = config.options.default_branch
+    local file_type = vim.bo.filetype
+
+    if config.options.debug_mode == true then
+        if config.options.file_specific_configs[file_type] then
+            local file_type_config = config.options.file_specific_configs[file_type]
+            if file_type_config.default_commit_message then
+                commit_message = file_type_config.default_commit_message
+            end
+        end
+    end
 
     if args:sub(1, 1) == "\"" then
         local last_quote = args:find("\"[^\"]*$")
