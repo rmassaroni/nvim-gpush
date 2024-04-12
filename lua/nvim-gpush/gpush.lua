@@ -6,7 +6,7 @@ function M.gpush(args)
     local script_path = os.getenv("HOME") .. "/.gpush/gpush.sh"
     local tags = ""
     --local commit_message = "\"" .. config.options.default_commit_message .. "\""
-    local branch = config.options.default_branch
+    --local branch = config.options.default_branch
     local file_type = vim.bo.filetype
 
     if config.options.debug_mode == true then
@@ -29,6 +29,7 @@ function M.gpush(args)
     end
 
     local commit_message = "\"" .. config.options.default_commit_message .. "\""
+    local branch = config.options.default_branch
 
 
     if args:sub(1, 1) == "\"" then
