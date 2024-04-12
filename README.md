@@ -25,6 +25,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
     one_liner = true, --false results in a visual bug regarding the command buffer
     default_commit_message = "unnamed commit" --overrides default_message in ~/.gpush/gconfig.sh
     default_branch = "main",
+
     file_specific_configs = {
         lua = {},
         java = {},
@@ -71,6 +72,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - single quote search
 - Ghelp. displays help stuff 
 - option to surround args in <>
+- filename specific configs along with extension specifc configs
 
 
 ## Known Bugs
