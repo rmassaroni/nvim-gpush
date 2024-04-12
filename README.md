@@ -27,6 +27,9 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
     default_branch = "main",
 
     file_specific_configs = {
+        markdown = {
+            default_commit_message = "readme"  --temporary until capability to specify README.md
+        },
         lua = {},
         java = {},
         python = {}.
