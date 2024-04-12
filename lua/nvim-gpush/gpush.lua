@@ -12,8 +12,13 @@ function M.gpush(args)
     if config.options.debug_mode == true then
         if config.options.file_specific_configs[file_type] then
             local file_type_config = config.options.file_specific_configs[file_type]
-            if file_type_config.default_commit_message then
-                commit_message = "\"" .. file_type_config.default_commit_message .. "\""
+            --if file_type_config.default_commit_message then
+            --    commit_message = "\"" .. file_type_config.default_commit_message .. "\""
+            --end
+            for option, value in pairs(file_type_config) do
+                if config.options[option] ~= nil then
+                    config.options[option] = value
+                end
             end
         end
     end
