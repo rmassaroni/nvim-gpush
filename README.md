@@ -78,7 +78,7 @@ Closing Vim to commit and push is decreasing your efficiency! nvim-gpush is the 
 - filename specific configs along with extension specifc configs
 - default lua commit messsage as "unnamed lua commit"?
 - denote as .lua?
-- option to set the frequency of auto gpushes. For example, every 10 seconds
+- option to set the frequency of auto gpushes. For example, every 10 seconds 
 
 
 ## Known Bugs
