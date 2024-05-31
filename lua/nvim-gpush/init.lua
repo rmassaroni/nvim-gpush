@@ -11,7 +11,9 @@ if not gpush_installed then
     -- gpush is not available, proceed with installation
     print("Installing gpush...")
     -- Run installation script
-    local install_command = "bash <(curl -sSL https://raw.githubusercontent.com/rmassaroni/gpush/install.sh)"
+    -- local install_command = "bash <(curl -sSL https://raw.githubusercontent.com/rmassaroni/gpush/install.sh)"
+    local install_command = "bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)"
+
     local install_result = vim.fn.system(install_command)
 
     if install_result == 0 then
