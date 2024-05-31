@@ -18,7 +18,9 @@ if not gpush_installed then
 
     if install_result == 0 then
         -- Installation successful, check if gpush is now available
-        gpush_installed = vim.fn.system('command -v gpush >/dev/null') == 0
+        --gpush_installed = vim.fn.system('command -v gpush >/dev/null') == 0
+        gpush_installed = vim.fn.isdirectory(vim.fn.expand('$HOME/.gpush')) == 1
+
         if gpush_installed then
             print("gpush has been installed successfully.")
         else
